@@ -1,0 +1,9 @@
+\begin{center}\begin{tikzpicture}[scale=1]
+\foreach \a/\b/\c/\d in {
+25/50/{Colby \\ $25\%$ }/cyan,
+50/80/{Brenda \\ $30\%$ }/red,
+80/125/{Alicia \\ $45\%$ }/green}{
+\filldraw[fill=\d!30,draw=black](0,0)--({\a*3.6}:2)arc({\a*3.6}:{\b*3.6}:2)--cycle;
+\node[shift={({(\a+\b)*1.8}:1)},align=center]at(0,0){\c};
+}
+\end{tikzpicture}\end{center}
