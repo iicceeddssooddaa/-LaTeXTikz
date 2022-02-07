@@ -1,0 +1,9 @@
+\begin{center}\begin{tikzpicture}[scale=.7]
+\foreach \a/\b/\c in {1/5/A,2/4/B,3/3/C,4/3/D,5/5/F}{
+\filldraw[cyan!30,draw=black]({\a-.25},0)rectangle({\a+.25},\b);
+\node[below]at(\a,0){\c};
+}
+\draw[-latex'](0,0)--(6,0)node[below]{Grade};
+\draw[-latex'](0,0)--node[sloped,shift={(0,.7)}]{Number of Students}(0,6);
+\foreach \x in {1,2,3,4,5}\draw(0,\x)node[left]{ $\x$ }--(.15,\x);
+\end{tikzpicture}\end{center}
