@@ -1,0 +1,63 @@
+%五选项版本
+\begin{center}\begin{tikzpicture}[scale=.5]
+\begin{scope}[shift={(0,0)}]
+\draw(0,3)-|++(2,-1)-|++(1,-1)-|++(1,-1)-|++(-2,1)-|++(-1,1)-|++(-1,1);
+\draw(1,3)-|++(0,-1)-|++(1,-1)-|++(1,-1);
+\node[below]at(2,0){A};
+\end{scope}
+\begin{scope}[shift={(6,0)}]
+\draw(0,3)-|++(1,-1)-|++(3,-1)-|++(-3,-1)-|++(-1,3);
+\draw(0,2)-|++(1,-1)(2,1)--++(0,1)(3,1)--++(0,1)(0,1)--++(1,0);
+\node[below]at(2,0){B};
+\end{scope}
+\begin{scope}[shift={(12,0)}]
+\draw(0,2)-|++(1,1)-|++(1,-1)-|++(2,-1)-|++(-1,-1)-|++(-1,1)-|++(-2,1);
+\draw(1,1)--++(0,1)(1,2)-|++(1,-1)(2,1)-|++(1,1);
+\node[below]at(2,0){C};
+\end{scope}
+\begin{scope}[shift={(18,0)}]
+\draw(0,2)-|++(1,1)-|++(1,-2)-|++(2,-1)-|++(-3,1)-|++(-1,1);
+\draw(1,1)--++(0,1)--++(1,0)(1,1)-|++(1,-1)(3,0)--++(0,1);
+\node[below]at(2,0){D};
+\end{scope}
+\begin{scope}[shift={(24,0)}]
+\draw(0,2)-|++(3,1)-|++(1,-2)-|++(-1,-1)-|++(-1,1)-|++(-2,1);
+\draw(1,1)--++(0,1)(2,1)--++(0,1)(2,1)-|++(1,1)(3,2)--++(1,0);
+\node[below]at(2,0){E};
+\end{scope}
+\end{tikzpicture}\end{center}
+
+
+
+%四选项版本
+\begin{center}\begin{tikzpicture}[scale=.3]\lPoint[][]{0,0}OO[-2]
+\lAxes{-5}{5}{-4}{4}{}{}
+\draw[domain=-3.3:3.3,samples=200]plot(\x,{(2^(abs(\x)))*sin(abs(\x r))*0.5});
+\node[below=.3cm]at(0,-4){A};
+\node[below,xshift=.2cm]at(3.14,0){ $\pi$ };
+\node[below,xshift=-.3cm]at(-3.14,0){ $-\pi$ };
+\begin{scope}[xshift=12cm]
+\lPoint[][]{0,0}OO[-2]
+\lAxes{-5}{5}{-5.5}{4}{}{}
+\draw[domain=-3.3:3.3,samples=200]plot(\x,{(2^(abs(\x)))*sin(2*abs(\x r))});
+\node[below=.3cm]at(0,-4){B};
+\node[below,xshift=.2cm]at(3.14,0){ $\pi$ };
+\node[below,xshift=-.3cm]at(-3.14,0){ $-\pi$ };
+\end{scope}
+\begin{scope}[xshift=24cm]
+\lPoint[][]{0,0}OO[-2]
+\lAxes{-5}{5}{-4}{4}{}{}
+\draw[domain=-3.3:3.3,samples=200]plot(\x,{(2^(abs(\x)))*sin(\x r)});
+\node[below=.3cm]at(0,-4){C};
+\node[below,xshift=.2cm]at(3.14,0){ $\pi$ };
+\node[below,xshift=-.3cm]at(-3.14,0){ $-\pi$ };
+\end{scope}
+\begin{scope}[xshift=36cm]
+\lAxes{-5}{5}{-5.5}{5.5}{}{};
+\draw[domain=-3.3:3.3,samples=200]plot(\x,{(2^(abs(\x)))*sin(2*\x r)});
+\node[below=.3cm]at(0,-4){D};
+\node[below,xshift=.2cm]at(3.14,0){ $\pi$ };
+\node[below,xshift=-.3cm]at(-3.14,0){ $-\pi$ };
+\node[below,xshift=.15cm]at(0,0){ $O$ };
+\end{scope}
+\end{tikzpicture}\end{center}
